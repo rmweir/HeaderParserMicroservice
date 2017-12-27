@@ -8,7 +8,9 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+var useragent = require('useragent');
 
+/*
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
     var allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com'];
@@ -21,6 +23,7 @@ if (!process.env.DISABLE_XORIGIN) {
     next();
   });
 }
+*/
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
@@ -33,15 +36,33 @@ app.route('/_api/package.json')
     });
   });
   
+app.get('/tid', function(req, res) {
+	console.log("entered");
+	var userinfo = useragent.parse(req.headers['user-agent']).source;
+	// below we extract the parts of the useragent representation that are useful to us
+	var begin = userinfo.indexOf("(");
+	var end = userinfo.indexOf(")");
+	userinfo = userinfo.slice(begin + 1, end);
+	console.log(userinfo);
+
+	var entireip = req.headers['x-forwarded-for'].slice(0,16);
+	var ipv4 = entireip.slice(0, entireip.indexOf(","));
+	
+	var entirelanguage = req.headers['accept-language'];
+	var language = entirelanguage.slice(0, entirelanguage.indexOf(","));
+	res.type('txt').status(200).send(JSON.stringify(userinfo) + "l" + ipv4 + language);
+ });
+
 app.route('/')
     .get(function(req, res) {
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
+
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
   res.status(404);
-  res.type('txt').send('Not found');
+  res.type('txt').send('Notaaaaaaiaaa found');
 });
 
 // Error Middleware
