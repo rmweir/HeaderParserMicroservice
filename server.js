@@ -10,21 +10,6 @@ var express = require('express');
 var app = express();
 var useragent = require('useragent');
 
-/*
-if (!process.env.DISABLE_XORIGIN) {
-  app.use(function(req, res, next) {
-    var allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com'];
-    var origin = req.headers.origin || '*';
-    if(!process.env.XORIG_RESTRICT || allowedOrigins.indexOf(origin) > -1){
-         console.log(origin);
-         res.setHeader('Access-Control-Allow-Origin', origin);
-         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    }
-    next();
-  });
-}
-*/
-
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.route('/_api/package.json')
@@ -36,7 +21,7 @@ app.route('/_api/package.json')
     });
   });
   
-app.get('/tid', function(req, res) {
+app.get('/whoami', function(req, res) {
 	console.log("entered");
 	var userinfo = useragent.parse(req.headers['user-agent']).source;
 	// below we extract the parts of the useragent representation that are useful to us
