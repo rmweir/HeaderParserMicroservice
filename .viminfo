@@ -26,23 +26,24 @@
 
 # Registers:
 ""-	CHAR	0
-	d
+	a
 
 # File marks:
-'0  11  36  ~/server.js
-'1  25  0  ~/server.js
-'2  26  66  ~/views/index.html
-'3  1  0  ~/public/index.html
-'4  1  0  ~/public/style.css
-'5  1  29  ~/public/style.css
-'6  1  470  ~/public/style.css
-'7  12  17  ~/views/index.html
-'8  5  0  ~/views/index.html
-'9  16  220  ~/views/index.html
+'0  51  27  ~/server.js
+'1  11  36  ~/server.js
+'2  25  0  ~/server.js
+'3  26  66  ~/views/index.html
+'4  1  0  ~/public/index.html
+'5  1  0  ~/public/style.css
+'6  1  29  ~/public/style.css
+'7  1  470  ~/public/style.css
+'8  12  17  ~/views/index.html
+'9  5  0  ~/views/index.html
 
 # Jumplist (newest first):
--'  11  36  ~/server.js
+-'  51  27  ~/server.js
 -'  1  1  ~/server.js
+-'  11  36  ~/server.js
 -'  25  0  ~/server.js
 -'  26  66  ~/views/index.html
 -'  1  0  ~/views/index.html
@@ -138,14 +139,13 @@
 -'  1  0  ~/package.json
 -'  16  65  ~/package.json
 -'  1  0  ~/package.json
--'  16  65  ~/package.json
 
 # History of marks within files (newest to oldest):
 
 > ~/server.js
-	"	11	36
+	"	51	27
 	^	11	37
-	.	12	0
+	.	51	27
 	+	11	36
 	+	11	38
 	+	11	536
@@ -176,6 +176,7 @@
 	+	25	0
 	+	24	15
 	+	12	0
+	+	51	27
 
 > ~/views/index.html
 	"	26	66
