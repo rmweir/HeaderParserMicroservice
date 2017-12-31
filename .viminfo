@@ -29,24 +29,25 @@
 	a
 
 # File marks:
-'0  51  27  ~/server.js
-'1  11  36  ~/server.js
-'2  25  0  ~/server.js
-'3  26  66  ~/views/index.html
-'4  1  0  ~/public/index.html
-'5  1  0  ~/public/style.css
-'6  1  29  ~/public/style.css
-'7  1  470  ~/public/style.css
-'8  12  17  ~/views/index.html
-'9  5  0  ~/views/index.html
+'0  20  51  ~/views/index.html
+'1  51  27  ~/server.js
+'2  11  36  ~/server.js
+'3  25  0  ~/server.js
+'4  26  66  ~/views/index.html
+'5  1  0  ~/public/index.html
+'6  1  0  ~/public/style.css
+'7  1  29  ~/public/style.css
+'8  1  470  ~/public/style.css
+'9  12  17  ~/views/index.html
 
 # Jumplist (newest first):
+-'  20  51  ~/views/index.html
+-'  1  0  ~/views/index.html
 -'  51  27  ~/server.js
 -'  1  1  ~/server.js
 -'  11  36  ~/server.js
 -'  25  0  ~/server.js
 -'  26  66  ~/views/index.html
--'  1  0  ~/views/index.html
 -'  1  0  ~/public/index.html
 -'  1  0  ~/public/style.css
 -'  12  17  ~/views/index.html
@@ -138,9 +139,28 @@
 -'  16  65  ~/package.json
 -'  1  0  ~/package.json
 -'  16  65  ~/package.json
--'  1  0  ~/package.json
 
 # History of marks within files (newest to oldest):
+
+> ~/views/index.html
+	"	20	51
+	^	20	52
+	.	20	51
+	+	1	478
+	+	30	0
+	+	15	119
+	+	16	152
+	+	16	27
+	+	15	23
+	+	18	92
+	+	19	0
+	+	18	118
+	+	20	108
+	+	25	52
+	+	5	19
+	+	16	220
+	+	12	17
+	+	20	51
 
 > ~/server.js
 	"	51	27
@@ -177,25 +197,6 @@
 	+	24	15
 	+	12	0
 	+	51	27
-
-> ~/views/index.html
-	"	26	66
-	^	26	67
-	.	12	17
-	+	1	478
-	+	30	0
-	+	15	119
-	+	16	152
-	+	16	27
-	+	15	23
-	+	18	92
-	+	19	0
-	+	18	118
-	+	20	108
-	+	25	52
-	+	5	19
-	+	16	220
-	+	12	17
 
 > ~/public/index.html
 	"	1	0
