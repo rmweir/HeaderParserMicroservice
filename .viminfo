@@ -8,8 +8,8 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
-:w
 :wq
+:w
 
 # Search String History (newest to oldest):
 
@@ -24,21 +24,23 @@
 	 
 
 # File marks:
-'0  43  47  ~/server.js
-'1  55  0  ~/server.js
-'2  39  13  ~/server.js
-'3  1  0  ~/views/index.html
-'4  13  27  ~/views/index.html
-'5  40  68  ~/server.js
-'6  1  7  ~/server.js
-'7  42  22  ~/server.js
-'8  16  65  ~/package.json
-'9  39  13  ~/server.js
+'0  45  4  ~/server.js
+'1  54  64  ~/server.js
+'2  43  47  ~/server.js
+'3  56  0  ~/server.js
+'4  39  13  ~/server.js
+'5  1  0  ~/views/index.html
+'6  13  27  ~/views/index.html
+'7  40  68  ~/server.js
+'8  1  7  ~/server.js
+'9  42  22  ~/server.js
 
 # Jumplist (newest first):
--'  43  47  ~/server.js
+-'  45  4  ~/server.js
 -'  1  1  ~/server.js
--'  55  0  ~/server.js
+-'  54  64  ~/server.js
+-'  43  47  ~/server.js
+-'  56  0  ~/server.js
 -'  39  13  ~/server.js
 -'  1  0  ~/views/index.html
 -'  13  27  ~/views/index.html
@@ -131,15 +133,13 @@
 -'  16  65  ~/package.json
 -'  1  0  ~/package.json
 -'  16  65  ~/package.json
--'  1  0  ~/views/index.html
--'  52  67  ~/server.js
 
 # History of marks within files (newest to oldest):
 
 > ~/server.js
-	"	43	47
-	^	43	48
-	.	43	47
+	"	45	4
+	^	45	5
+	.	45	4
 	+	11	36
 	+	13	1
 	+	26	2
@@ -159,6 +159,13 @@
 	+	11	0
 	+	41	58
 	+	43	47
+	+	53	171
+	+	54	83
+	+	52	69
+	+	53	0
+	+	54	78
+	+	54	64
+	+	45	4
 
 > ~/views/index.html
 	"	1	0

@@ -42,7 +42,7 @@ app.get('/tid', function(req, res) {
 	// below we extract the parts of the useragent representation that are useful to us
 	var begin = userinfo.indexOf("(");
 	var end = userinfo.indexOf(")");
-	userinfo = userinfo.slice(begin + 1, end);
+	var software = userinfo.slice(begin + 1, end);
 	console.log(userinfo);
 
 	var entireip = req.headers['x-forwarded-for'].slice(0,16);
@@ -50,8 +50,9 @@ app.get('/tid', function(req, res) {
 	
 	var entirelanguage = req.headers['accept-language'];
 	var language = entirelanguage.slice(0, entirelanguage.indexOf(","));
-	res.type('txt').status(200).send(JSON.stringify(userinfo) + "l" + ipv4 + language);
- });
+	var useragentjson = { "ipaddress": ipv4, "language": language, "software": software };
+	res.type('txt').status(200).send(JSON.stringify(useragentjson)); 
+});
 
 app.route('/')
     .get(function(req, res) {
